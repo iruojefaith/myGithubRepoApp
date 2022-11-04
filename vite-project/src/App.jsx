@@ -1,8 +1,16 @@
 import React from "react";
-import GithubCards from "./components/GithubCards";
+import { Link } from "react-router-dom";
+
 
 function App() {
-  return <GithubCards />;
+  return (
+    <div className="main-container">
+    <h1>welcome</h1>
+         <Link to={`/`}>Home</Link>
+
+         <Link to="/components"><button>View Here</button></Link>
+    </div>
+  )
 }
 
 export default App;
