@@ -25,7 +25,7 @@ const GithubCards = ({ apiResult }) => {
         return (
           <div key={index}>
               <h1>{data.name}</h1>
-              <Link to={`/RepoCard/${data.id}`}>
+              <Link to={`/GithubCards/${data.id}`}>
                   View Reposities
              </Link>
           </div>

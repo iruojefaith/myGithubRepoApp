@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
 import GithubCards from "./components/GithubCards";
+import ErrorPage from "./components/Error";
 
 
 
@@ -33,6 +34,10 @@ const IndexPage = () => {
     {
       path: "/components/:id",
       element: <GithubCards apiResult={apiResult} />,
+    },
+     {
+      path: "*",
+      element: <ErrorPage/>,
     },
   ]);
 
