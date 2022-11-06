@@ -53,6 +53,49 @@ body,
     background: #555;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.main-container {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  min-height: 50vh;
+}
+.welcome-text{
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+  line-height: 1.5;
+  margin-top: -1rem;
+  text-align: start;
+}
+.welcome-text h1{
+  font-size: 7rem;
+  font-weight: 700;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--blue);
+}
+.welcome-text p{
+  color: var(--black1);
+  margin-bottom: 10px;
+	font-size: 1.5rem;
+}
+.welcome-text button{
+    margin-top: 5px;
+    display: block;
+    padding: 10px 5rem;
+    border: none;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 .pagination-flex-box {
   display: flex;
   align-items: center;

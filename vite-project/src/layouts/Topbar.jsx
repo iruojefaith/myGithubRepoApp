@@ -1,19 +1,24 @@
-import React from 'react'
-import FiSearch  from "react-icons/fi"
+import React from 'react';
+import { Link } from "react-router-dom";
+// import FiSearch  from "react-icons/fi";
 function Topbar() {
   return (
      <div className="topbar">
         <div className='topbar_box'>
         <div className="App_logo">
-                <h1>MY REPO DASHBOARD</h1>
+                <h1>REPO DASHBOARD</h1>
             </div>
 
             <div className="search">
                 <label >
                     <input type="text" placeholder="Search here" />
-                    <FiSearch />
+                    {/* <FiSearch /> */}
                 </label>
             </div>
+            <div className='home'>
+                 <Link to={`/`}>Home</Link>
+            </div>
+
             </div>
 
 
@@ -23,4 +28,4 @@ function Topbar() {
   );
 }
 
-export default Topbar
+export default Topbar;

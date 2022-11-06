@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
 :root {
 	--blue: #03045e;
+    --light-blue: rgba(3, 4, 94, .8);
 	--white: #fff;
 	--grey: #f5f5f5;
 	--black1: #222;
@@ -15,6 +17,7 @@
 
 }
 
+/*-------------SIDE BAR-----------*/
 .main {
 	position: absolute;
 	width: calc(100% - 300px);
@@ -33,30 +36,37 @@
 	border-left: 10px solid var(--blue);
 	transition: 0.5%;
 	overflow: hidden;
+    color: var(--white);
 }
 .navigation ul {
+    margin-top: 50px;
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: -1rem;
 	width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
 }
 
-.user {
+.profile-picture {
     display: flex;
 	position: relative;
     justify-content: center;
 	width: 150px;
 	height: 150px;
-	border-radius: 50%;
+	border-radius: 1rem;
+    border: 3px solid #fff;
 	overflow: hidden;
     margin-left: -30px;
-	cursor: pointer;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
-.user img {
+
+.profile-picture img {
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -65,26 +75,43 @@
 ul .nav_brand {
 	position: relative;
 	display: block;
-	margin-top: 8px;
+	margin-top: 3rem;
+    margin-left: -2rem;
 	padding: 10px;
 	height: 60px;
-	line-height: 20px;
+	line-height: 30px;
 	text-align: start;
+    color: var(--white);
 	justify-content: center;
 	white-space: nowrap;
+    min-width: 100%;
 }
-.nav_link {
-    position: relative;
-	display: block;
-	width: 100%;
-	display: flex;
+.me-auto {
+    display: flex;
     flex-direction: column;
-	text-decoration: none;
-	color: var(--white);
+    margin-top: 5rem;
+}
+.navigation .me-auto .nav_link {
+	list-style: none;
+    align-items: center;
+    padding: 15px ;
+    margin-left: -2rem;
+    font-size: 1em;
+    font-weight: 600;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+    min-width: 200%;
+}
+.navigation .me-auto .nav_link:hover,
+.navigation .me-auto .nav_link.hovered {
+	background: var(--white);
+	height: 50px;
+    width: 100%;
 }
 
+
 .navigation .nav_link:hover .nav_link::before,
-.navigation  .nav_link.hovered .nav_link::before {
+.navigation  .nav_link.hovered .nav_link::after {
 	content: "";
 	position: absolute;
 	right: 0;
@@ -96,8 +123,10 @@ ul .nav_brand {
 	box-shadow: 35px 35px 0 10px var(--white);
 	pointer-events: none;
 }
+
+/*-------------------TOP BAR---------------*/
 .topbar {
-	width: calc(100%);
+	width: 100%;
 	height: 60px;
 	display: flex;
 	justify-content: center;
@@ -105,25 +134,39 @@ ul .nav_brand {
 	padding: 0 10px;
 }
 .topbar_box {
-    display: grid;
-    grid-template-columns: repeat(3, 200px);
+    display: flex;
     justify-content: space-between;
 	align-items: center;
 }
 .App_logo {
-    width: 100%;
+    position: relative;
     display: flex;
+    width: 100%;
+    left: -10rem;
 
 }
+.home {
+
+    display: flex;
+    position: relative;
+    right: -20rem;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
 .App_logo h1{
-    font-size: 1.5em;
-    color: var(--blue);font-weight: 700;
+    font-size: 1.6em;
+    color: var(--blue);
+    font-weight: 700;
+    margin-top: 40px;
 }
 
 .search {
 	position: relative;
-	width: 400px;
-	margin: 0 10px;
+    width: 100%;
+    margin-left: 3rem;
     margin-top: 40px;
 }
 .search label {
@@ -143,7 +186,7 @@ ul .nav_brand {
 	margin-top: 5px;
 }
 
-
+/*-------------GITHUBCARD (LIST OF ALL REPO)---------------*/
 .cardBox {
 	position: relative;
 	width: 100%;
@@ -160,7 +203,6 @@ ul .nav_brand {
 	display: flex;
     flex-direction: column;
 	justify-content: space-between;
-	cursor: pointer;
 	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
@@ -184,10 +226,11 @@ ul .nav_brand {
     border: none;
     font-weight: 600;
     font-size: 1em;
+    cursor: pointer;
     font-family: 'Source Sans Pro', sans-serif;
 }
 .cardBox .card:hover {
-	background: var(--blue);
+	background: var(--light-blue);
 }
 .cardBox .card:hover .title,
 .cardBox .card:hover .cardName {
@@ -195,7 +238,7 @@ ul .nav_brand {
 }
 
 
-
+/*----------------REPOSITORY DETAIL--------------------*/
 .details {
 	position: relative;
     margin-top: 30px;
@@ -206,6 +249,8 @@ ul .nav_brand {
 }
 .details_h1{
     color: var(--blue);
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 .details .details_one {
 	position: relative;
@@ -225,4 +270,55 @@ ul .nav_brand {
 	background: var(--white);
 	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 	border-radius: 20px;
+}
+
+/* -----------------RESPONSIVE DESIGN----------------  */
+@media (max-width: 991px) {
+	.navigation {
+		left: -300px;
+	}
+	.navigation.active {
+		width: 300px;
+		left: 0;
+	}
+	.main {
+		width: 100%;
+		left: 0;
+	}
+	.main.main.active {
+		left: 300px;
+	}
+	.cardBox {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 768px) {
+
+	.details {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.status.inprogress {
+		white-space: nowrap;
+	}
+}
+@media (max-width: 480px) {
+	.cardBox {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.cardHeader h2 {
+		font-size: 20px;
+	}
+	.user {
+		min-width: 40px;
+	}
+	.navigation {
+		width: 100%;
+		left: -100%;
+		z-index: 1000;
+	}
+	.navigation.active {
+		width: 100%;
+		left: 0;
+	}
+
 }

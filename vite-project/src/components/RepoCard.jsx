@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ErrorBoundary from "../utillitis/ErrorBoundary";
-
+import {Helmet } from 'react-helmet'
 import TopBar from "../layouts/Topbar";
 import Sidebar from "../layouts/Sidebar";
 import "./githubcard.css"
@@ -50,6 +50,14 @@ const RepoCard = () => {
   console.log(repoName)
   return (
     <div>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet = 'utf-8' />
+        <meta name="description" content={`${repoName} by Iruoje Faith`} />
+        <meta name= "keywords" content= "Frontend, reactjs, react project git, github, frontend developer, Iruoje Faith, github API, Github REST API" />
+        <meta name= "author" content= "Iruoje Faith" />
+        <title>{repoName} | Iruoje Faith </title>
+      </Helmet>
         <Sidebar />
     <div>
     <TopBar />
