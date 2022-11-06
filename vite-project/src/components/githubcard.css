@@ -293,16 +293,38 @@ ul .nav_brand {
 	}
 }
 @media (max-width: 768px) {
+.search {
+	display: none;
+}
+.App_logo {
+    left: 1rem;
+}
+.home {
 
+    left: -1rem;
+
+}
+
+.topbar_box {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+
+}
 	.details {
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.status.inprogress {
+
 		white-space: nowrap;
+	}
+	.cardBox {
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
 @media (max-width: 480px) {
-	.cardBox {
+	.card {
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.cardHeader h2 {

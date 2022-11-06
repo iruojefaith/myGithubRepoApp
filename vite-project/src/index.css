@@ -135,4 +135,10 @@ flex-direction: column;
 .welcome-text p{
   font-size: 1.1rem;
 }
+.navigation {
+		width: 100%;
+		left: -100%;
+		z-index: 1000;
+	}
+
 }
