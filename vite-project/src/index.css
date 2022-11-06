@@ -66,6 +66,9 @@ body,
   margin-top: 3rem;
   min-height: 50vh;
 }
+img {
+  width: 100%;
+}
 .welcome-text{
   display: flex;
   flex-direction: column;
@@ -117,4 +120,19 @@ body,
 
 .pagination-boxes {
   padding: 0.5em 1em !important;
+}
+@media (max-width: 768px) {
+.main-container{
+flex-direction: column;
+}
+
+.welcome-text h1{
+  font-size: 4rem;
+}
+.welcome-text {
+  margin-right: 0;
+}
+.welcome-text p{
+  font-size: 1.1rem;
+}
 }
