@@ -3,12 +3,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 
-// Router
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
 
 
 
@@ -61,16 +55,7 @@ const IndexPage = () => {
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <BrowserRouter>
-  //   <Routes>
-  //     <Route path="/" element={<App />}>
-  //       <Route path="/components" element={<GithubCards apiResult={apiResult} />}>
-  //         <Route path=":componentsId" element={<RepoCard apiResult={apiResult} />} />
-  //         <Route path="*" element={<ErrorPage />} />
-  //       </Route>
-  //     </Route>
-  //   </Routes>
-  // </BrowserRouter>,
+
   <React.StrictMode>
     <IndexPage />
   </React.StrictMode>

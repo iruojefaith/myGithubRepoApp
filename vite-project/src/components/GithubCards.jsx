@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Pagination  from "../utillitis/Pagination";
 
-import RepoCard from "./RepoCard";
-//Bootstrap
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import TopBar from "../layouts/Topbar";
+import Sidebar from "../layouts/Sidebar";
+
+
+
+import "./githubcard.css"
+
 
 
 
 
 const GithubCards = ({ apiResult }) => {
-  const [postPerPage] = useState(10);
+  const [postPerPage] = useState(6);
   const [currentPage, setcurrentPage] = useState(1);
   const indexOfLastPage = postPerPage * currentPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
@@ -24,58 +25,41 @@ const GithubCards = ({ apiResult }) => {
 
 
     return (
+      <div>
+
+     <Sidebar />
      <>
+     <div >
+     <TopBar />
+
       {ModifiedRepostate.length !== 0 ? (
         <div>
-
-     {/* <div className="git_repo_container">
-        {ModifiedRepostate.map((data, index) => {
-        return (
-          <div key={index}>
-              <h1>{data.name}</h1>
-              <Link to={`./RepoCard/${data.name}`}>
-                  View Reposities
-             </Link>
-          </div>
-
-        );
-        })}
-     </div> */}
-     <div>
-      <Row xs={1} md={2} className="g-4">
-      {Array.from({ length: 10 }).map((_, idx) => (
-        <Col>
-     <Card style={{ width: '18rem' }}>
-      <Card.Body>
+        <div className="main">
+        <div className="cardBox">
       {ModifiedRepostate.map((data, index) => {
         return (
-      <div key={index}>
-        <Card.Title>{data.name}</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary"><Link to={`./repocard?name=${data.name}`}>
-                  View Reposities
-             </Link></Button>
+      <div key={index}  >
 
+
+           <div className="card">
+            <h1 className="title">{data.name}</h1>
+            <p className="cardName">
+              Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+            </p>
+             <button variant="primary"><Link to={`./repocard?name=${data.name}`}>
+                  View Reposities
+             </Link></button>
+          </div>
              </div>
+
+
               );
         })}
-      </Card.Body>
-    </Card>
 
-    </Col>
-      ))}
-    </Row>
-    </div>
-     <div>
 
-      {/* <Routes>
-        <Route path="/repocard" element={<RepoCard />} />
-      </Routes> */}
 
-        <Pagination
+       </div> <Pagination
             currentPage={currentPage}
             apiResult={apiResult} // to total amount of 100 result
             setcurrentPage={setcurrentPage} // Current Page
@@ -83,12 +67,14 @@ const GithubCards = ({ apiResult }) => {
           />
           <br />
           <br />
-      </div>
+       </div>
       </div>
           ):(
 <div></div>
           )}
+          </div>
       </>
+      </div>
     );
   };
 
