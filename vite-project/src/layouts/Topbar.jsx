@@ -1,24 +1,24 @@
 import React from 'react'
-
+import FiSearch  from "react-icons/fi"
 function Topbar() {
   return (
      <div className="topbar">
-            <div className="toggle">
-                {/* <ion-icon name="menu-outline"></ion-icon> */}
+        <div className='topbar_box'>
+        <div className="App_logo">
+                <h1>MY REPO DASHBOARD</h1>
             </div>
-
 
             <div className="search">
                 <label >
                     <input type="text" placeholder="Search here" />
-                    {/* <ion-icon name="search-outline"></ion-icon> */}
+                    <FiSearch />
                 </label>
             </div>
-
-
-            <div className="user">
-
             </div>
+
+
+
+
         </div>
   );
 }

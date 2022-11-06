@@ -34,7 +34,7 @@ const GithubCards = ({ apiResult }) => {
 
       {ModifiedRepostate.length !== 0 ? (
         <div>
-        <div className="main">
+        <div className="main" >
         <div className="cardBox">
       {ModifiedRepostate.map((data, index) => {
         return (
@@ -48,7 +48,7 @@ const GithubCards = ({ apiResult }) => {
           bulk of the card's content.
             </p>
              <button variant="primary"><Link to={`./repocard?name=${data.name}`}>
-                  View Reposities
+                  View Repositries
              </Link></button>
           </div>
              </div>

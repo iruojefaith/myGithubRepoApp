@@ -15,10 +15,10 @@ function Sidebar() {
         </div>
 
         <h3>IRUOJE FAITH</h3>
-          <Navbar href="#home" className='nav_brand'>@iruojefaith</Navbar>
+          <Navbar href="#" className='nav_brand'>@iruojefaith</Navbar>
 
           <Nav className="me-auto">
-            <Nav.Link href="#home" className='nav_link'>View Repositries</Nav.Link>
+            <Nav.Link href="#githubcard" className='nav_link'>View Repositries</Nav.Link>
             <Nav.Link href="#features" className='nav_link'>Features</Nav.Link>
             </Nav>
         </ul>
