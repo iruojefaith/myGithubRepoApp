@@ -2,13 +2,8 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-
-
-
-
 import RepoCard from "./components/RepoCard";
 import ErrorPage from "./components/Error";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import GithubCards from "./components/GithubCards";
 
@@ -24,7 +19,6 @@ const IndexPage = () => {
               }, []);
 
     const router = createBrowserRouter([
-
     {
       path: "/",
       element: <App />,

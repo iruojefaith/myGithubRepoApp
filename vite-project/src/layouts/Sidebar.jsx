@@ -1,18 +1,30 @@
-import React from 'react'
+import React,{ useState, useEffect } from 'react'
 
 import { Link } from "react-router-dom";
 import '../components/githubcard.css'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Logo from '../../src/profile-picture.jpg'
+import Logo from '../../src/profile-picture.jpg';
+
 
 function Sidebar() {
+  const [ profile, setProfile] = useState([])
+
+  useEffect(() =>{
+  const fetchRepos = async () =>{
+const results = await fetch("https://api.github.com/users/iruojefaith")
+           results.json().then(data => {
+            setProfile(data)
+          }
+           )}
+           fetchRepos()
+},[])
   return (
     <div className="repo_container">
     <Navbar className='navigation'>
         <ul>
         <div className='profile-picture'>
-           <img src={Logo} alt="Iruoje Faith Picture" />
+           <img src={`${profile.avatar_url}`} alt="Iruoje Faith Picture" />
         </div>
 
 
